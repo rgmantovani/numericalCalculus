@@ -1,1 +1,14 @@
+* Básico de Python
+http://people.bu.edu/andasari/courses/basicpython/basicpython.html
+
+* Operações numéricas em Python
 http://people.bu.edu/andasari/courses/numericalpython/python.html
+
+* Uso do scipy
+https://www.southampton.ac.uk/~fangohr/teaching/python/book/html/16-scipy.html
+
+* Tutorial de gráficos no Matplotlib
+https://nbviewer.jupyter.org/github/jrjohansson/scientific-python-lectures/blob/master/Lecture-4-Matplotlib.ipynb
+
+* Erros
+https://notgnoshi.github.io/numerical-math/
