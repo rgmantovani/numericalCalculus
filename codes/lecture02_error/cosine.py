@@ -1,9 +1,15 @@
+#######################################
+#######################################
+
 import math
 import numpy as np
 
-# x in degrees
-# es is the desired error
-# maxit is the number of iterations
+#######################################
+#######################################
+
+# x: em graus
+# es: é o erro de parada
+# maxit: número de iterações
 
 def cosseno(x, es, maxit):
     
@@ -12,29 +18,31 @@ def cosseno(x, es, maxit):
     
     cosx = 0
     
-    # converting x to rads
+    # convertendo x para radianos (rads)
     rads = x * (np.pi / 180)
     
     while True:
         
         sol_old = cosx 
    
-        # summing tems
+        # somatório (série)
         cosx = cosx + ((pow(-1, iter) * pow(rads, 2 * iter)) / math.factorial(2 * iter))
    
         iter = iter + 1
  
-        # updating error
+        # atualização do erro
         if(cosx  != 0):
             ea = abs((cosx  - sol_old)/cosx ) * 100
         
-        # stopping criteria
+        # critério de parada
         if(ea <= es or iter >= maxit):
             break
         
     return cosx , ea, iter
 
+#######################################
 # *** Casos de teste
+#######################################
     
 # cosseno(x = 0, es = 1e-10, maxit = 100)
 # (1.0, 0.0, 2)
@@ -51,3 +59,4 @@ def cosseno(x, es, maxit):
 # cosseno(x = 360, es = 1e-10, maxit = 100)
 # (0.9999999999999942, 1.458833054357464e-11, 19)
 
+#######################################
