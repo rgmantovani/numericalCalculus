@@ -8,7 +8,7 @@ def eDeX(x, es, maxit):
         sol_old = sol
         sol = sol + (pow(x, iter) / math.factorial(iter))
         iter = iter + 1
-        if(sol == 0):
+        if(sol != 0):
             ea = abs((sol - sol_old)/sol) * 100
         if(ea <= es or iter >= maxit):
             break
